@@ -26,11 +26,14 @@ cp ../../archives/config.guess ../../archives/config.sub .
 ## Configure the build.
 CFLAGS="-I$PSL1GHT/ppu/include -I$PS3DEV/portlibs/ppu/include" \
 LDFLAGS="-L$PSL1GHT/ppu/lib -L$PS3DEV/portlibs/ppu/lib -lrt -llv2" \
+PKG_CONFIG_LIBDIR="$PS3DEV/portlibs/ppu/lib/pkgconfig" \
 PKG_CONFIG_PATH="$PS3DEV/portlibs/ppu/lib/pkgconfig" \
 ./configure --prefix="$PS3DEV/portlibs/ppu" --host="powerpc64-ps3-elf" \
     --disable-sdltest \
     --with-sdl-exec-prefix="$PS3DEV/portlibs/ppu" \
     --disable-shared \
+    --disable-avif \
+    --disable-jxl \
     --disable-tif \
     --disable-webp \
     --enable-static \
