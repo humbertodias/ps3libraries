@@ -240,6 +240,15 @@ jobs:
       - name: Build SDL2_gfx 1.0.4
         run: ./libraries.sh 047
 
+      - name: Build SDL3 3.5.0
+        run: ./libraries.sh 048
+
+      - name: Build SDL3_mixer 3.2.4
+        run: ./libraries.sh 049
+
+      - name: Build SDL3_ttf 3.2.2
+        run: ./libraries.sh 050
+
       - name: Build Package
         run: |
            cd $PSL1GHT

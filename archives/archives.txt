@@ -46,3 +46,6 @@ b6ae1ee2fa3d42ac489287d3ec34c5885730b1296f0801ae577a35193d3affbc  1903175 https:
 -                                                                       - https://github.com/bucanero/mini18n/tarball/master -> mini18n.tar.gz
 -                                                                       - https://github.com/bucanero/libansilove/tarball/master -> libansilove.tar.gz
 25cb043240f828a8c51beb830569634bc7ac603978e0f69d6b63558dadefd49a  1056093 https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.9.0.tar.gz -> yaml-cpp.tar.gz
+b7eef526854ca06935fa3c235467914c521ef3584c28914820ec6342fcaf9c5a 16502097 https://github.com/libsdl-org/SDL/archive/f2c4ef111d9892f0332f60568b1e646fa51cdf98.tar.gz -> SDL3-3.5.0.tar.gz
+182a07c745375e113dc740d43964ff21b0be29f29f59876c4dbc4db3d32f6901  5161139 https://github.com/libsdl-org/SDL_mixer/releases/download/release-3.2.4/SDL3_mixer-3.2.4.tar.gz
+63547d58d0185c833213885b635a2c0548201cc8f301e6587c0be1a67e1e045d  1545950 https://github.com/libsdl-org/SDL_ttf/releases/download/release-3.2.2/SDL3_ttf-3.2.2.tar.gz
