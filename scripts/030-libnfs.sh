@@ -1,16 +1,21 @@
-#!/bin/sh -e
-#
+#!/usr/bin/env bash
+set -eo pipefail
 # libnfs by sahlberg
 #	ported to PS3 by Bucanero
 
+## Source util functions
+source ../utils/utils.sh
+
 ## Download the source code.
-owner=sahlberg
-repo=libnfs
-tag_latest=`wget -qO- "https://api.github.com/repos/${owner}/${repo}/tags" | grep -o '"name": "[^"]*' | cut -d'"' -f4 | head -n1`
-wget https://github.com/${owner}/${repo}/archive/refs/tags/${tag_latest}.tar.gz -O libnfs.tar.gz 
+../download.sh libnfs.tar.gz 
 
 ## Unpack the source code.
-rm -Rf libnfs && mkdir libnfs && tar --strip-components=1 --directory=libnfs -xvzf libnfs.tar.gz && cd libnfs
+rm -Rf libnfs
+mkdir libnfs
+echo "Unpacking libnfs"
+extract ../archives/libnfs.tar.gz --strip-components=1 --directory=libnfs
+cd libnfs
 
 ## Compile and install.
-${MAKE:-make} -f ps3_ppu/Makefile.PS3_PPU install
+jobs=$(nproc 2>/dev/null || sysctl -n hw.ncpu)
+${MAKE:-make} -j"$jobs" -f ps3_ppu/Makefile.PS3_PPU install

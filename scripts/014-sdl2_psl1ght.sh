@@ -7,14 +7,14 @@ set -eo pipefail
 source ../utils/utils.sh
 
 ## Download the source code.
-../download.sh sdl_psl1ght.tar.gz
+../download.sh sdl2_psl1ght.tar.gz
 
 ## Unpack the source code.
-rm -Rf sdl_psl1ght
-mkdir sdl_psl1ght
-echo "Unpacking sdl_psl1ght"
-extract ../archives/sdl_psl1ght.tar.gz --strip-components=1 --directory=sdl_psl1ght
-cd sdl_psl1ght
+rm -Rf sdl2_psl1ght
+mkdir sdl2_psl1ght
+echo "Unpacking sdl2_psl1ght"
+extract ../archives/sdl2_psl1ght.tar.gz --strip-components=1 --directory=sdl2_psl1ght
+cd sdl2_psl1ght
 
 ## Compile and install.
 jobs=$(nproc 2>/dev/null || sysctl -n hw.ncpu)

@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
-# libzip-0.9.3.sh by Naomi Peori (naomi@peori.ca)
-LIBZIP="libzip-0.9.3"
+# libogg-1.3.4.sh by Naomi Peori (naomi@peori.ca)
+LIBOGG="libogg-1.3.4"
 
 ## Source util functions
 source ../utils/utils.sh
 
 ## Download the source code.
-../download.sh ${LIBZIP}.tar.bz2
+../download.sh ${LIBOGG}.tar.gz
 
 ## Fetch config.guess and config.sub, falling back to copies if Savannah is unavailable
 ../config/get-config-scripts.sh
 
 ## Unpack the source code.
-rm -Rf ${LIBZIP}
-echo "Unpacking ${LIBZIP}"
-extract ../archives/${LIBZIP}.tar.bz2
-cd ${LIBZIP}
+rm -Rf ${LIBOGG}
+echo "Unpacking ${LIBOGG}"
+extract ../archives/${LIBOGG}.tar.gz
+cd ${LIBOGG}
 
 ## Replace config.guess and config.sub
 cp ../../archives/config.guess ../../archives/config.sub .

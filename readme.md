@@ -1,25 +1,24 @@
-[![Run Tests](https://github.com/humbertodias/ps3libraries/actions/workflows/test.yml/badge.svg)](https://github.com/humbertodias/ps3libraries/actions/workflows/test.yml)
+[![CI](https://github.com/ps3dev/ps3libraries/actions/workflows/build.yml/badge.svg)](https://github.com/ps3dev/ps3libraries/actions/workflows/build.yml) 
 
-###  What does this do?
+# ps3libraries
 
-This program will automatically build and install libraries used in the creation
-of homebrew software for the Sony Playstation 3 videogame system.
+A collection of libraries built in conjunction with the PS3 development environment.
 
-### How do I use it?
+# What does this do?
 
-1. Set up your environment by installing the following software:
+  This program will automatically build and install libraries used in the creation
+  of homebrew software for the Sony Playstation 3 videogame system.
 
-- autoconf 
-- automake
-- libtool 
-- make
-- pkg-config
-- ps3toolchain
-- psl1ght-sdl1
-- wget
+# How do I use it?
 
-2. Run the library script:
+ 1) Set up your environment by installing the following software:
+
+```
+  autoconf, automake, libtool, make, pkg-config, ps3toolchain, psl1ght, wget
+```
+
+ 2) Run the library script:
 
 ```sh
-./libraries.sh
+  ./libraries.sh
 ```

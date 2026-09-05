@@ -1,20 +1,25 @@
-#!/bin/sh -e
+#!/usr/bin/env bash
+set -eo pipefail
 # libjson-c.sh by Mohammad Haseeb (mmhaqs@gmail.com)
 
-wget https://codeload.github.com/json-c/json-c/tar.gz/json-c-0.11-20130402 -O jsonc.tar.gz
+## Source util functions
+source ../utils/utils.sh
 
-## Download an up-to-date config.guess and config.sub
-if [ ! -f config.guess ]; then wget http://git.savannah.gnu.org/cgit/config.git/plain/config.guess; fi
-if [ ! -f config.sub ]; then wget http://git.savannah.gnu.org/cgit/config.git/plain/config.sub; fi
+## Download the source code.
+../download.sh json-c-0.11-20130402.tar.gz
+
+## Fetch config.guess and config.sub, falling back to copies if Savannah is unavailable
+../config/get-config-scripts.sh
 
 ## Unpack the source code.
-rm -Rf jsonc && mkdir jsonc && tar --strip-components=1 --directory=jsonc -xvzf jsonc.tar.gz
-
-## Create the build directory.
+rm -Rf jsonc
+mkdir jsonc
+echo "Unpacking jsonc"
+extract ../archives/json-c-0.11-20130402.tar.gz --strip-components=1 --directory=jsonc
 cd jsonc
 
 ## Replace config.guess and config.sub
-cp ../config.guess ../config.sub .
+cp ../../archives/config.guess ../../archives/config.sub .
 
 ## Configure the build.
 CFLAGS="-Wno-error -I$PSL1GHT/ppu/include -I$PS3DEV/portlibs/ppu/include" \
@@ -25,4 +30,5 @@ ac_cv_func_malloc_0_nonnull=yes ac_cv_func_realloc_0_nonnull=yes \
 ./configure --prefix="$PS3DEV/portlibs/ppu" --host="powerpc64-ps3-elf" --enable-static --disable-shared
 
 ## Compile and install.
-${MAKE:-make} && ${MAKE:-make} install
+jobs=$(nproc 2>/dev/null || sysctl -n hw.ncpu)
+${MAKE:-make} -j"$jobs" && ${MAKE:-make} -j"$jobs" install
