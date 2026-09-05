@@ -39,3 +39,4 @@ b6ae1ee2fa3d42ac489287d3ec34c5885730b1296f0801ae577a35193d3affbc  1903175 https:
 -                                                                       - https://github.com/bucanero/mini18n/tarball/master -> mini18n.tar.gz
 -                                                                       - https://github.com/bucanero/libansilove/tarball/master -> libansilove.tar.gz
 25cb043240f828a8c51beb830569634bc7ac603978e0f69d6b63558dadefd49a  1056093 https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.9.0.tar.gz -> yaml-cpp.tar.gz
+-                                                                       - https://github.com/humbertodias/SDL2_PSL1GHT_Libs/tarball/psl1ght-2.30.1 -> sdl2_psl1ght_libs.tar.gz
