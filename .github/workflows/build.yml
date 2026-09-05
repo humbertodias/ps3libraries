@@ -243,11 +243,14 @@ jobs:
       - name: Build SDL3 3.5.0
         run: ./libraries.sh 048
 
-      - name: Build SDL3_mixer 3.2.4
+      - name: Build SDL3_image 3.4.6
         run: ./libraries.sh 049
 
-      - name: Build SDL3_ttf 3.2.2
+      - name: Build SDL3_mixer 3.2.4
         run: ./libraries.sh 050
+
+      - name: Build SDL3_ttf 3.2.2
+        run: ./libraries.sh 051
 
       - name: Build Package
         run: |

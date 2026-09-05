@@ -1,4 +1,4 @@
-# Cache preload for SDL3, SDL3_mixer, and SDL3_ttf on PS3.
+# Cache preload for SDL3, SDL3_image, SDL3_mixer, and SDL3_ttf on PS3.
 # cmake -C path/to/sdl3.cmake ...
 
 # SDL3
@@ -21,6 +21,15 @@ set(SDL_OFFSCREEN OFF CACHE BOOL "" FORCE)
 set(SDL_RENDER_GPU OFF CACHE BOOL "" FORCE)
 set(SDL_TRAY OFF CACHE BOOL "" FORCE)
 set(SDL_VIRTUAL_JOYSTICK OFF CACHE BOOL "" FORCE)
+
+# SDL3_image — use stb + portlibs png/jpeg; skip formats we do not ship
+set(SDLIMAGE_SAMPLES OFF CACHE BOOL "" FORCE)
+set(SDLIMAGE_TESTS OFF CACHE BOOL "" FORCE)
+set(SDLIMAGE_VENDORED OFF CACHE BOOL "" FORCE)
+set(SDLIMAGE_AVIF OFF CACHE BOOL "" FORCE)
+set(SDLIMAGE_JXL OFF CACHE BOOL "" FORCE)
+set(SDLIMAGE_TIF OFF CACHE BOOL "" FORCE)
+set(SDLIMAGE_WEBP OFF CACHE BOOL "" FORCE)
 
 # SDL3_mixer
 set(SDLMIXER_TESTS OFF CACHE BOOL "" FORCE)
