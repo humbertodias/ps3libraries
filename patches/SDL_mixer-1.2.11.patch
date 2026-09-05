@@ -31,10 +31,11 @@ diff -burN SDL_mixer-1.2.11.orig//music_mod.c SDL_mixer-1.2.11/music_mod.c
  	switch (mixerfmt->format) {
  
  		case AUDIO_U8:
-@@ -85,6 +89,20 @@
+@@ -85,6 +89,22 @@
  		}
  		break;
  
++#ifdef AUDIO_F32LSB
 +		case AUDIO_F32LSB:
 +		case AUDIO_F32MSB: {
 +			music_tof = 1;
@@ -48,6 +49,7 @@ diff -burN SDL_mixer-1.2.11.orig//music_mod.c SDL_mixer-1.2.11/music_mod.c
 +			*mikmod.md_mode = DMODE_16BITS;
 +		}
 +		break;
++#endif
 +
  		default: {
  			Mix_SetError("Unknown hardware audio format");

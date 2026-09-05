@@ -19,7 +19,7 @@ dfb15ac5f8ce7a4952dc12d2aed9747518c5e6b335c0e31636d23f93c630f419  1693451 http:/
 1cfb34c87b26dbdbc7afd68c4f545c0116ab5f90bbfecc5aebe2a9cb4bb31549 10874471 https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.0/SDL2_mixer-2.8.0.tar.gz
 d48cbd1ce475b9e178206bf3b72d56b66d84d44f64ac05803328396234d67723 14314901 https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.22.0/SDL2_ttf-2.22.0.tar.gz
 63e0e01addedc9df2f85b93a248f06e8a04affa014a835c2ea34bfe34e576262  1230588 http://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-1.0.4.tar.gz
-0ac2ccd1449d9126b021428473137cc8255c60e624b955fef21ee5313db084f2  4526286 https://web.archive.org/web/20110715000000id_/http://www.libsdl.org/tmp/SDL-1.3.tar.gz -> SDL-1.3.0.tar.gz
+5172f97606100080603a48e5279a2b90213905c77e17953ce2a13cff03e10bef  3743019 https://github.com/libsdl-org/SDL-1.2/archive/refs/tags/release-1.2.15.tar.gz -> SDL-1.2.15.tar.gz
 01215ffbc8cfc4ad165ba7573750f15ddda1f971d5a66e9dcaffd37c587f473a  7428023 https://github.com/libsdl-org/SDL/releases/download/release-2.30.1/SDL2-2.30.1.tar.gz
 d3605afc28ed4b7d1d9e3142d72e42855e4a23c07c951bbb0299556b02d36755  1741396 https://mirror2.openwrt.org/sources/polarssl-1.3.9-gpl.tgz
 432d3f466644b9416bc5b649d344116a753aeaa520c8beaf024a90cba9d3d35d  4008103 https://curl.haxx.se/download/curl-7.64.1.tar.gz

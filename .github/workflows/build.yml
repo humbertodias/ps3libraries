@@ -135,7 +135,7 @@ jobs:
       - name: Build Libxml2 2.9.12
         run: ./libraries.sh 012
 
-      - name: Build SDL 1.3.0
+      - name: Build SDL 1.2.15
         run: ./libraries.sh 013
 
       - name: Build SDL_mixer 1.2.11

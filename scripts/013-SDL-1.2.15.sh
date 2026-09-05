@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
-# SDL-1.3.0.sh — official SDL 1.3.0 snapshot with PSL1GHT PPU patch
-SDL="SDL-1.3.0"
+# SDL-1.2.15.sh — official SDL 1.2.15 from libsdl-org/SDL-1.2 with PPU patch
+SDL="SDL-1.2.15"
 
 ## Source util functions
 source ../utils/utils.sh
@@ -31,10 +31,14 @@ cp ../../archives/config.guess ../../archives/config.sub build-scripts/
 CFLAGS="-O2 -Wall -I$PSL1GHT/ppu/include" \
 LDFLAGS="-L$PSL1GHT/ppu/lib -lrt -llv2" \
 ./configure --prefix="$PS3DEV/portlibs/ppu" --host="powerpc64-ps3-elf" \
-    --enable-atomic=yes \
-    --enable-video-psl1ght=yes \
-    --enable-joystick=yes \
-    --enable-audio=yes
+    --disable-shared \
+    --enable-static \
+    --without-x \
+    --disable-video-x11 \
+    --disable-video-ps3 \
+    --disable-nasm \
+    --enable-joystick \
+    --enable-audio
 
 ## Compile and install.
 jobs=$(nproc 2>/dev/null || sysctl -n hw.ncpu)
