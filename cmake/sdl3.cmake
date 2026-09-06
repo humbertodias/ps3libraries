@@ -1,4 +1,4 @@
-# Cache preload for SDL3, SDL3_image, SDL3_mixer, SDL3_net, and SDL3_ttf on PS3.
+# Cache preload for SDL3, SDL3_image, SDL3_mixer, SDL3_net, SDL3_ttf, and SDL3_gfx on PS3.
 # cmake -C path/to/sdl3.cmake ...
 
 # SDL3
@@ -52,3 +52,6 @@ set(SDLNET_SAMPLES OFF CACHE BOOL "" FORCE)
 set(SDLTTF_VENDORED ON CACHE BOOL "" FORCE)
 set(SDLTTF_HARFBUZZ OFF CACHE BOOL "" FORCE)
 set(SDLTTF_SAMPLES OFF CACHE BOOL "" FORCE)
+
+# SDL3_gfx
+set(BUILD_TESTS OFF CACHE BOOL "" FORCE)
