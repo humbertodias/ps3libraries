@@ -255,9 +255,6 @@ jobs:
       - name: Build Yaml-cpp 0.9.0
         run: ./libraries.sh 052
 
-      - name: Build MbedTLS 2.16.6
-        run: ./libraries.sh 053
-
       - name: Build Package
         run: |
            cd $PSL1GHT
