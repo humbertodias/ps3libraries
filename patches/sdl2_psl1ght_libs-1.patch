@@ -1,0 +1,11 @@
+--- a/scripts/006_SDL2_image-2.8.2.sh
++++ b/scripts/006_SDL2_image-2.8.2.sh
+@@ -16,6 +16,8 @@
+ 	--disable-sdltest \
+ 	--with-sdl-exec-prefix="$PS3DEV/portlibs/ppu" \
+ 	--disable-shared \
++	--disable-avif \
++	--disable-jxl \
+ 	--disable-tif \
+ 	--disable-webp \
+ 	--enable-static \
