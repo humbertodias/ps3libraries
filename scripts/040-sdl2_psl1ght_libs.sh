@@ -22,9 +22,7 @@ cd sdl2_psl1ght_libs
 ## Preload config.guess and config.sub
 cp ../../archives/config.guess ../../archives/config.sub archives/
 
-## Host Homebrew libavif/jpeg-xl must not leak into the PPU SDL2_image link.
-cat ../../patches/sdl2_psl1ght_libs-1.patch | patch -p1
-
+## Host Homebrew .pc files must not leak into PPU configure/link.
 export PKG_CONFIG_LIBDIR="${PS3DEV}/portlibs/ppu/lib/pkgconfig"
 export PKG_CONFIG_PATH="${PS3DEV}/portlibs/ppu/lib/pkgconfig"
 
