@@ -19,10 +19,6 @@ echo "Unpacking ${LIBXML2}"
 extract ../archives/${LIBXML2}.tar.gz
 cd ${LIBXML2}
 
-## Patch pthread_t issue for modern toolchains
-echo "Patching testThreads.c..."
-patch -p1 < ../../patches/${LIBXML2}-pthread.patch
-
 ## Replace config.guess and config.sub
 cp ../../archives/config.guess ../../archives/config.sub .
 
